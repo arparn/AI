@@ -1,0 +1,10 @@
+Selle ülesanne eesmärgiks oli implimenteerida 3 tee otsimise algoritmi: laiutiotsing(bfs()), ahnealgoritm(greedy()),
+A*(astar()) ja uurida kui efektiivsed nad on. Katsetades kõik 3 algoritmi ASCII-art kaartides erinevate suurustega 300X300,
+600X600 ja 900X900 ma mõõdusin kõikide algoritmide jaoks iteratsioonide arvu ja tee pikkuse. Mõõtude tulemuste alusel
+ma sain teada et kõige efektiivsem (kiirem) algoritm on Greedy Best First Search algoritm (greedy) tema iteratsioonide
+arvud on kõige väiksemad võrreldes teiste algoritmidega, aga tema teepikkused on kõige suuremad ahk ta ei suuda leida
+kõige lühima tee. Laiutiotsingu ja A* algoritmide poolt leitud teepikkused on sarnased ja palju lühemad kui
+Greedy Best First Search algoritmi poolt leitud teed. Laiutiotsing ja A* algoritmid suudavad leida kõige lühemad teed.
+Laiutiotsingu algoritm on kõige ebaeffektiivsem iteratsioonide arvuga algoritm, shk töötab kõige kauem, sest otsib
+teed kõikidele tipudele, ehk ta on kõige aeglasem. A* algoritm on kesk positsioonil, sest ta suudab leida optimaalne
+tee ja ei kuulu selleks nii palju aega kui laiutiotsingu algoritm.
