@@ -1,0 +1,28 @@
+Ma tegin seda ulesanne kasutades randomit ja rekursiooni et vältida local mininumi. Minu algoritmi too põhimõtte on selline,
+et kui ta leiab mittu samasugusi konflikti arvuga koordinaati, kuhu võib queeni paigutada, siis ta randomiga valib nende hulgast uhe
+ja pakkub seda nagu parima käigu. Kui algoritmi too lõppus ei õnnestu lahendust leida siis ma kasutan rekursiooni
+ja niimodi panen algoritmi jalle käima. See kordub niikaua kuni ta leiab õige probleemi lahendus, ehk kui konfliktide arv on 0.
+Minu algoritmiga mul õnnestus lahendada 4X4, 5X5, 6X6, 7X7, 8X8, 9X9 ja 10X10 laua suurusega NQueen probleemi piisavalt kiiresti ja
+minu arvates suudab ta ka suurematega mängulauatega lahendust leida kuna võtab see natuke rohkem aega.
+
+4X4 NQueen probleemi lahendus:
+    [0, 1, 0, 0]
+    [0, 0, 0, 1]
+    [1, 0, 0, 0]
+    [0, 0, 1, 0]
+    Initial position value 6
+    Final value 0
+    Final positions:  [(0, 2), (1, 0), (2, 3), (3, 1)]
+
+8X8 NQueen probleemi lahendus:
+    [0, 0, 0, 0, 0, 1, 0, 0]
+    [0, 0, 1, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 1, 0]
+    [0, 1, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 0, 0, 0, 0, 1]
+    [0, 0, 0, 0, 1, 0, 0, 0]
+    [1, 0, 0, 0, 0, 0, 0, 0]
+    [0, 0, 0, 1, 0, 0, 0, 0]
+    Initial position value 28
+    Final value 0
+    Final positions:  [(0, 6), (1, 3), (2, 1), (3, 7), (4, 5), (5, 0), (6, 2), (7, 4)]
