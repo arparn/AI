@@ -5,10 +5,6 @@ class NQPosition:
         self.N = N
         queens = []
         for i in range(N):
-            #if i % 2 == 0:
-                #queens.append((i, int(N / 2)))
-            #else:
-                #queens.append((i, int(N / 2 - 1)))
             queens.append((i, 0))
         self.queens = queens
 
@@ -17,7 +13,7 @@ class NQPosition:
         conflicts = []
         for queen in self.queens:
             for i in range(self.N):
-                if (i, queen[1]) != queen and (i, queen[1]) in self.queens and (queen, (i, queen[1])) not in conflicts and ((i, queen[1]), queen) not in conflicts:  # TODO
+                if (i, queen[1]) != queen and (i, queen[1]) in self.queens and (queen, (i, queen[1])) not in conflicts and ((i, queen[1]), queen) not in conflicts:
                     conflicts.append((queen, (i, queen[1])))
                 if (queen[0], i) != queen and (queen[0], i) in self.queens and (queen, (queen[0], i)) not in conflicts and ((queen[0], i), queen) not in conflicts:
                     conflicts.append((queen, (queen[0], i)))
@@ -54,9 +50,8 @@ class NQPosition:
                 if i == queen[1]:
                     continue
                 else:
-                    first_pos = queen
                     new_pos = (queen[0], i)
-                    move = (first_pos, new_pos)
+                    move = (queen, new_pos)
                     self.make_move(move)
                     new_value = self.value()
                     if new_value < value:
@@ -66,7 +61,7 @@ class NQPosition:
                         same_values.append(move)
                     elif new_value == value:
                         same_values.append(move)
-                    self.make_move((new_pos, first_pos))
+                    self.make_move((new_pos, queen))
         if len(same_values) > 0:
             import random
             best_m = random.choice(same_values)

@@ -198,19 +198,16 @@ if __name__ == '__main__':
         map_data6 = [l.strip() for l in f.readlines() if len(l) > 1]
     ss = (2, 2)
 
-    path, loop = bfs(map_data, ss)
-    print("900 bfs path length and loops: " + str(path) + " " + str(loop))
-
     path, loop = bfs(map_data3, ss)
     print("300 bfs path length and loops: " + str(path) + " " + str(loop))
 
     path, loop = bfs(map_data6, ss)
     print("600 bfs path length and loops: " + str(path) + " " + str(loop))
 
-    print("------------------------------------------------------------")
+    path, loop = bfs(map_data, ss)
+    print("900 bfs path length and loops: " + str(path) + " " + str(loop))
 
-    path, loop = greedy(map_data, ss, (895, 898))
-    print("900 greedy path length and loops: " + str(path) + " " + str(loop))
+    print("------------------------------------------------------------")
 
     path, loop = greedy(map_data3, ss, (257, 295))
     print("300 greedy path length and loops: " + str(path) + " " + str(loop))
@@ -218,14 +215,17 @@ if __name__ == '__main__':
     path, loop = greedy(map_data6, ss, (595, 598))
     print("600 greedy path length and loops: " + str(path) + " " + str(loop))
 
-    print("------------------------------------------------------------")
+    path, loop = greedy(map_data, ss, (895, 898))
+    print("900 greedy path length and loops: " + str(path) + " " + str(loop))
 
-    path, loop = astar(map_data, ss, (895, 898))
-    print("900 astar path length and loops: " + str(path) + " " + str(loop))
+    print("------------------------------------------------------------")
 
     path, loop = astar(map_data3, ss, (257, 295))
     print("300 astar path length and loops: " + str(path) + " " + str(loop))
 
     path, loop = astar(map_data6, ss, (595, 598))
     print("600 astar path length and loops: " + str(path) + " " + str(loop))
+
+    path, loop = astar(map_data, ss, (895, 898))
+    print("900 astar path length and loops: " + str(path) + " " + str(loop))
 
