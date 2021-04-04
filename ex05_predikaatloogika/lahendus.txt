@@ -1,0 +1,30 @@
+Minu lahendus:
+
+east(gondor,mordor).
+near(gondor,mordor).
+north(gondor,rohan).
+near(gondor,rohan).
+south(lothlorien,rohan).
+near(lothlorien,rohan).
+east(moria,lothlorien).
+near(lothlorien,moria).
+south(high_pass,moria).
+near(moria,high_pass).
+west(high_pass,rivendell).
+near(rivendell,high_pass).
+east(bree,rivendell).
+near(rivendell,bree).
+east(shire,bree).
+near(bree,shire).
+near(X,Y) <=> near(Y,X).
+east(X,Y) <=> west(Y,X).
+north(X,Y) <=> south(Y,X).
+(east(X,Y) & east(Y,Z)) => east(X,Z).
+(north(X,Y) & north(Y,Z)) => north(X,Z).
+(west(X,Y) & west(Y,Z)) => west(X,Z).
+(south(X,Y) & south(Y,Z)) => south(X,Z).
+
+(south(X,Y) & east(Y,Z)) => (south(X,Z) & east(X,Z)).
+(east(X,Y) & south(Y,Z)) => (east(X,Z) & south(X,Z)).
+
+-south(shire,mordor).

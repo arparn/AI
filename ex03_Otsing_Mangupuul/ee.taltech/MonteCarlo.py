@@ -61,13 +61,13 @@ def dump_pos(pos):
     # prindi info seisu kohta
     for row in pos["board"]:
         print(row)
-        #for i in range(7):
-            #if i == 0:
-                #print("|" + row[i], end="")
-            #elif i == 6:
-                #print(row[i] + "|", end="\n")
-            #else:
-                #print(row[i], end="")
+        # for i in range(7):
+        # if i == 0:
+        # print("|" + row[i], end="")
+        # elif i == 6:
+        # print(row[i] + "|", end="\n")
+        # else:
+        # print(row[i], end="")
     print("| 0    1    2    3    4    5    6 |")
 
 
