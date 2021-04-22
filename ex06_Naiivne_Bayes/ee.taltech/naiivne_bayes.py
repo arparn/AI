@@ -76,6 +76,7 @@ def define_topic():
             topic_possibility.clear()
     pprint("correct: " + str(correct_topics))
     pprint("incorrect: " + str(incorrect_topics))
+    pprint("accuracy: " + str((100 * correct_topics) / (correct_topics + incorrect_topics)) + "%")
 
 
 if __name__ == '__main__':
