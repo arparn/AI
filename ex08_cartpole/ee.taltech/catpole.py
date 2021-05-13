@@ -44,7 +44,7 @@ def play():
 
             observation = next_observation
             if done:
-                print("Episode {} finished after {} timesteps".format(i_episode, t + 1))
+                print(t + 1)
                 break
         if gambling_rate > 0:
             gambling_rate -= 1

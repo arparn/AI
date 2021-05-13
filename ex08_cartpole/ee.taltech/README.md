@@ -9,3 +9,5 @@ tehisintellekt saab positiivse auhinna. Kui kukkub, siis saab negatiivse auhinna
 minu koodis käivitatakse meetod train_q_table(), mis on vaja, et tehisintellekti treenida.
 train_q_table() ma annan parameetritena praegune observation, jargmine observation, auhinna ja käigu.
 Siis ma muutan praeguse oservation'i jargmise observation'i peale ja iteratsioon kordub uute teadmistega.
+
+![esimene pilt](/ex08_cartpole/graafik.png "esimene pilt")
